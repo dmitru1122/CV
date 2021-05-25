@@ -1,0 +1,93 @@
+@import "../../../theme/variables.scss";
+
+.home {
+  .link-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $ui-grey-light;
+    padding: 0.8 * $basic-margin;
+    opacity: 0.8;
+    border-radius: 3 * $basic-margin;
+    height: 1.8 * $basic-margin;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    width: 20 * $basic-margin;
+    &__img {
+      border-radius: 50%;
+      background-color: $ui-grey;
+      height: 2.5 * $basic-margin;
+      box-sizing: border-box;
+    }
+
+    &:hover {
+      opacity: 1;
+
+      img {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  .intro-block {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+
+    &__right {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      * {
+        max-width: 70%;
+      }
+    }
+    &__left {
+      flex: 2;
+
+      &__img {
+        position: absolute;
+        left: -25%;
+        top: 0px;
+      }
+    }
+    &__hr {
+      width: 10%;
+      background-color: $ui-black;
+      height: 0.3 * $basic-margin;
+      margin: 0;
+    }
+    &__link {
+      margin: 1.2 * $basic-margin;
+
+      &__img {
+        margin-left: $basic-margin;
+      }
+    }
+
+    &__background-title {
+      opacity: 0.2;
+      font-family: revert;
+      font-size: 15rem;
+      position: absolute;
+      left: 10%;
+      bottom: 0px;
+      z-index: -1;
+    }
+  }
+  &__about-myself{
+    margin-top: 5 * $basic-margin;
+  }
+  &__technical-skills{
+    margin-top: 5 * $basic-margin;
+  }
+  &__projects {
+    margin-top: 5 * $basic-margin;
+  }
+  
+}
