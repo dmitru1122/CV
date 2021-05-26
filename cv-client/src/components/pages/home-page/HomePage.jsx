@@ -374,9 +374,9 @@ function Home() {
                     <li>
                     <h4 className="list__content__title">Achievements:</h4>
                       <ul>
-                        <li>Work with team.</li>
-                        <li>Tested backend.</li>
-                        <li>Built responsive application's UI.</li>
+                        <li>Work with team</li>
+                        <li>Tested backend</li>
+                        <li>Built responsive application's UI</li>
                         <li>
                           Develop all frontend functionality from the ground up
                         </li>
@@ -421,10 +421,10 @@ function Home() {
                     <li>
                     <h4 className="list__content__title">Achievements:</h4>
                       <ul>
-                        <li>Work with a big team.</li>
+                        <li>Work with a big team</li>
                         <li>
                           Added new features and functionality to existing
-                          project.
+                          project
                         </li>
                       </ul>
                     </li>
@@ -467,7 +467,7 @@ function Home() {
                     <li>
                     <h4 className="list__content__title">Achievements:</h4>
                       <ul>
-                        <li>Built responsive application's UI,</li>
+                        <li>Built responsive application's UI</li>
                         <li>
                           Develop all frontend functionality from the ground up
                         </li>
@@ -478,135 +478,6 @@ function Home() {
               </div>
             </div>
           </div>
-          {/* <ArticleCs
-            title="My projects"
-            blocks={
-              [
-                // {
-                //   header: "Cv",
-                //   content: [
-                //     {
-                //       header: "",
-                //       type: "text",
-                //       text: ["Stack: JavaScript, HTML, CSS, React.js"],
-                //     },
-                //     {
-                //       header: "Link",
-                //       type: "link",
-                //       text: ["It is current site"],
-                //     },
-                //     {
-                //       header: "",
-                //       type: "text",
-                //       text: ["Role: Front-end developer"],
-                //     },
-                //     {
-                //       header: "",
-                //       type: "text",
-                //       text: ["Description: Website to introduce myself"],
-                //     },
-                //     {
-                //       header: "",
-                //       type: "text",
-                //       text: [
-                //         "Achievements: Design all project architecture and structure, Built responsive application's UI, Develop all frontend functionality from the ground up",
-                //       ],
-                //     },
-                //   ],
-                // },
-                // {
-                //   header: "Zupp.io",
-                //   content: [
-                //     {
-                //       header: "",
-                //       type: "text",
-                //       text: [
-                //         "Stack: HTML, CSS, SASS, TypeScript, Vue.ts, Vue Router",
-                //       ],
-                //     },
-                //     { header: "", type: "text", text: ["Link: https://zupp.io"] },
-                //     {
-                //       header: "",
-                //       type: "text",
-                //       text: ["Role: Front-end developer"],
-                //     },
-                //     {
-                //       header: "",
-                //       type: "text",
-                //       text: ["Description: Website to zupp service"],
-                //     },
-                //     {
-                //       header: "",
-                //       type: "text",
-                //       text: [
-                //         "Achievements: Work with team. Built responsive application's UI, Develop all frontend functionality from the ground up",
-                //       ],
-                //     },
-                //   ],
-                // },
-                // {
-                //   header: "Zupp.io.statistic",
-                //   content: [
-                //     {
-                //       header: "stack",
-                //       type: "text",
-                //       text: [
-                //         "Stack: HTML, CSS, SASS, TypeScript, Vue.ts, Vue Router, Node.js",
-                //       ],
-                //     },
-                //     {
-                //       header: "Link:",
-                //       link: ["https://status.zupp.io/"],
-                //       text: ["https://status.zupp.io/"],
-                //     },
-                //     { header: "Role", text: ["Front-end developer"] },
-                //     { header: "Description", text: ["Website to zupp service"] },
-                //     {
-                //       header: "Achievements",
-                //       type: "list",
-                //       text: [
-                //         "Achievements: Work with team. Tested backend. Built responsive application's UI, Develop all frontend functionality from the ground up",
-                //       ],
-                //     },
-                //   ],
-                // },
-                // {
-                //   header: "Le Rosey",
-                //   content: [
-                //     {
-                //       header: "Stack",
-                //       type: "text",
-                //       text: [
-                //         "HTML, CSS, SASS, JavaScript, Vue.ts, Vue Router",
-                //       ],
-                //     },
-                //     {
-                //       header: "Link",
-                //       type: "link",
-                //       text: ["https://www.rosey.ch/"],
-                //     },
-                //     {
-                //       header: "Role",
-                //       type: "text",
-                //       text: ["Front-end developer"],
-                //     },
-                //     {
-                //       header: "Description",
-                //       type: "text",
-                //       text: ["We developed a client site for Switzerland school"],
-                //     },
-                //     {
-                //       header: "Achievements",
-                //       type: "text",
-                //       text: [
-                //         "Work with a big team. Fixed bugs. Added new features and functionality to existing site",
-                //       ],
-                //     },
-                //   ],
-                // },
-              ]
-            }
-          /> */}
         </Suspense>
       </section>
 
