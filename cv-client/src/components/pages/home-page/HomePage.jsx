@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useRef } from "react";
 import "./HomePage.scss";
 import arrowRight from "../../../assets/arrow-right.svg";
 // const myPhoto = lazy(() => import("../../../assets/myPhoto.jpg"));
@@ -7,18 +7,25 @@ const ArticleCs = lazy(() => import("../../atricle-cs/ArticleCs"));
 // const Test = lazy(() => import('../../atricle-cs/tes'));
 
 function Home() {
+  const aboutMyselfRef = useRef(null);
+  const skills = useRef(null);
+  const myProject = useRef(null);
+
+  function scrollToRef(ref) {
+    const positionTop = ref.current.getBoundingClientRect().y;
+    document.body.scrollTo(0, positionTop);
+  }
+
   return (
     <div className="home">
       <section className="intro-block  container horizontal-center">
         <div className="intro-block__left">
-          {/* <Suspense fallback={<div>Loading...</div>}> */}
           <img
             className="intro-block__left__img"
             src={myPhoto}
             alt="me"
             title="My photo"
           />
-          {/* </Suspense> */}
         </div>
         <div className="intro-block__right">
           <h2
@@ -36,16 +43,24 @@ function Home() {
             Have experience with front-end and UI-design. Working with a focus
             on Optimal efficiency, quality, and functionality.
           </p>
-          <div className="intro-block__link app-text--l app-text link-block">
-            About me{" "}
+          <div className="intro-block__link app-text--l app-text link-block" onClick={() => scrollToRef(aboutMyselfRef)}>
+            About myself
             <img
               className="intro-block__link__img link-block__img"
               src={arrowRight}
               alt="arrow"
             />
           </div>
-          <div className="intro-block__link app-text--l app-text link-block">
-            My project{" "}
+          <div className="intro-block__link app-text--l app-text link-block" onClick={() => scrollToRef(skills)}>
+            My skills
+            <img
+              className="intro-block__link__img link-block__img"
+              src={arrowRight}
+              alt="arrow"
+            />
+          </div>
+          <div className="intro-block__link app-text--l app-text link-block" onClick={() => scrollToRef(myProject)}>
+            My project
             <img
               className="intro-block__link__img link-block__img"
               src={arrowRight}
@@ -55,7 +70,7 @@ function Home() {
         </div>
         <div className="intro-block__background-title app-text">FRONT-END</div>
       </section>
-      <section className="home__about-myself">
+      <section className="home__about-myself" ref={aboutMyselfRef}>
         <Suspense fallback={<div>Loading...</div>}>
           {/* <Test /> */}
           <div className="article-cs">
@@ -104,7 +119,7 @@ function Home() {
           </div>
         </Suspense>
       </section>
-      <section className="home__technical-skills">
+      <section className="home__technical-skills" ref={skills}>
         <Suspense fallback={<div>Loading...</div>}>
           {/* <Test /> */}
           <div className="article-cs">
@@ -179,6 +194,13 @@ function Home() {
                     <li>Analytical skill</li>
                     <li>Organisational skill</li>
                   </ul>
+                  <div className="list__title app-text app-text--uppercase upp-text-m">
+                    <div className="list__title-index">#4</div> Languages
+                  </div>
+                  <ul className="list__content">
+                    <li>Russian native speaker</li>
+                    <li>English B1</li>
+                  </ul>
                 </>
               </div>
             </div>
@@ -220,7 +242,7 @@ function Home() {
           /> */}
         </Suspense>
       </section>
-      <section className="home__projects">
+      <section className="home__projects" ref={myProject}>
         <Suspense fallback={<div>Loading...</div>}>
           <div className="article-cs">
             <div className="article-cs__header-block app-text app-text--uppercase app-text--white app-text--xl">
@@ -330,7 +352,7 @@ function Home() {
                     <h4 className="list__content__title">Link:</h4>
                       <ul>
                         <li>
-                          <a href="https://status.zupp.io/">
+                          <a href="https://status.zupp.io/" target="_blank">
                             https://status.zupp.io/
                           </a>
                         </li>
@@ -375,7 +397,7 @@ function Home() {
                     <h4 className="list__content__title">Link:</h4>
                       <ul>
                         <li>
-                          <a href="https://www.rosey.ch/">
+                          <a href="https://www.rosey.ch/" target="_blank">
                             https://www.rosey.ch/
                           </a>
                         </li>
@@ -422,7 +444,7 @@ function Home() {
                     <h4 className="list__content__title">Link:</h4>
                       <ul>
                         <li>
-                          <a href="https://scr.by/">https://scr.by/</a>
+                          <a href="https://scr.by/" target="_blank">https://scr.by/</a>
                         </li>
                       </ul>
                     </li>

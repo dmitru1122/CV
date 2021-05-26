@@ -129,6 +129,10 @@
         &__content {
             margin-left: 5 * $basic-margin;
             max-width: 50 * $basic-margin;
+
+            &__title ~ ul li {
+              list-style-type: none;
+            }
         }
     }
 }
