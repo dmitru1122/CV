@@ -5,6 +5,9 @@ body {
     height: 100%;
     font-family: 'Peace Sanc';
     overflow-x: hidden;
+    @media screen and (max-width: $breakpoint-sm) {
+        font-size: 0.7rem;
+      }
 }
 
 body {

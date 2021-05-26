@@ -39,7 +39,7 @@ function Home() {
             Front-end developer
           </h3>
 
-          <p className="intro-block__describtion app-text--l app-text">
+          <p className="intro-block__describtion app-text--l app-text descktop">
             Have experience with front-end and UI-design. Working with a focus
             on Optimal efficiency, quality, and functionality.
           </p>
