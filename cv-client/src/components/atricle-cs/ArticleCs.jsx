@@ -23,10 +23,46 @@ function Article(props) {
           {blocks && blocks.length
             ? blocks.map((block, index) => (
                 <>
-                  <div key={block.header} className="list__title app-text app-text--uppercase upp-text-m"><div className="list__title-index">#{index + 1}</div> {block.header}</div>
+                  <div
+                    key={block.header}
+                    className="list__title app-text app-text--uppercase upp-text-m"
+                  >
+                    <div className="list__title-index">#{index + 1}</div>{" "}
+                    {block.header}
+                  </div>
                   <ul className="list__content">
-                    {block.content && block.content.length
-                      ? block.content.map((text) => <li key={text}>{text}</li>)
+                    {block.content && block.content.length 
+                      ? block.content.forEach((currentPoint) =><li key={currentPoint.text[0]}>{currentPoint.text[0]}</li>)
+                      // {
+                      //   console.log(currentPoint);
+                      //   console.log(block.content);
+                          // switch (currentPoint.type) {
+                          //   case "link": {
+                          //     (<li key={currentPoint.text[0]}>
+                          //       <div>{currentPoint.header}</div>
+                          //       <a href={currentPoint.text[0]}> {currentPoint.text[0]} </a>
+                          //       </li>)
+                          //     ;
+
+                          //     break;
+                          //   }
+
+                          //   case "text": {
+                          //     (<li key={currentPoint.text[0]}>
+                          //       {currentPoint.header}
+                          //       <div href={currentPoint.text[0]}> {currentPoint.text[0]} </div>
+                          //     </li>);
+                          //     break;
+                          //   }
+
+                          //   default: {
+                          //     break;
+                          //   }
+                          // }
+                          // (<>fsdf</>)
+                        //   (<li>content</li>)
+                        // })
+                        
                       : ""}
                   </ul>
                 </>
