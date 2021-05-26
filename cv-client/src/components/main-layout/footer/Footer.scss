@@ -1,6 +1,5 @@
 @import "../../../theme/variables.scss";
 .footer {
-    position: relative;
   margin-top: 5 * $basic-margin;
   background-color: $ui-black;
   width: 100%;
@@ -12,8 +11,8 @@
   &__title {
     opacity: 0.2;
     font-family: revert;
-    font-size: 15rem;
-    // position: absolute;
+    font-size: 6 * $basic-margin;
+    font-size: 10vw;
     left: 10%;
     bottom: 0px;
     z-index: 1;

@@ -64,7 +64,9 @@
 
         @media screen and (max-width: $breakpoint-sm) {
           left: -15 * $basic-margin;
-          // height: 80vh;
+        }
+        @media screen and (max-width: $breakpoint-xs) {
+          left: -18 * $basic-margin;
         }
       }
     }
