@@ -2,7 +2,7 @@ import { Suspense, lazy, useRef } from "react";
 import "./HomePage.scss";
 import arrowRight from "../../../assets/arrow-right.svg";
 // const myPhoto = lazy(() => import("../../../assets/myPhoto.jpg"));
-import myPhoto from "../../../assets/myPhoto_black.png";
+import myPhoto from "../../../assets/myPhoto.png";
 const ArticleCs = lazy(() => import("../../atricle-cs/ArticleCs"));
 // const Test = lazy(() => import('../../atricle-cs/tes'));
 
@@ -18,7 +18,7 @@ function Home() {
 
   return (
     <div className="home">
-      <section className="intro-block  container horizontal-center">
+      <section className="intro-block  container">
         <div className="intro-block__left">
           <img
             className="intro-block__left__img"
