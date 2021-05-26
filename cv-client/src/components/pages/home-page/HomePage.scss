@@ -48,6 +48,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      z-index: 3;
 
       * {
         max-width: 70%;
@@ -58,15 +59,16 @@
 
       &__img {
         position: absolute;
-        left: 0%;
+        left: -5 * $basic-margin;
         top: 0px;
         height: 100vh;
+        z-index: 1;
 
         @media screen and (max-width: $breakpoint-sm) {
-          left: -15 * $basic-margin;
+          left: -10 * $basic-margin;
         }
         @media screen and (max-width: $breakpoint-xs) {
-          left: -18 * $basic-margin;
+          left: -12 * $basic-margin;
         }
       }
     }

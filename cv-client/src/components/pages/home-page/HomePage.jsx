@@ -99,17 +99,16 @@ function Home() {
                     <div className="list__title-index">#2</div> Hobbies
                   </div>
                   <ul className="list__content">
-                    <li>Geographic</li>
+                    <li>Geography</li>
                     <li>History</li>
-                    <li>Volunteering</li>
-                    <li>Teaching</li>
+                    <li>technology</li>
                   </ul>
                   <div className="list__title app-text app-text--uppercase upp-text-m">
                     <div className="list__title-index">#3</div> Education
                   </div>
                   <ul className="list__content">
                     <li>
-                      Mechanical engineering food processing <br/>'Brest State
+                      Mechanical engineer <br/>'Brest State
                       Technical University (BrSTU)'
                     </li>
                   </ul>
@@ -319,7 +318,7 @@ function Home() {
                     <li>
                       <h4 className="list__content__title">Description:</h4>
                       <ul>
-                        <li>Website to zupp service</li>
+                        <li>Website for zupp service</li>
                       </ul>{" "}
                     </li>
                     <li>
@@ -368,7 +367,7 @@ function Home() {
                     <li>
                     <h4 className="list__content__title">Description:</h4>
                       <ul>
-                        <li>Website to zupp service</li>
+                        <li>Admin panel for zupp service</li>
                       </ul>
                     </li>
                     <li>
