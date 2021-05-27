@@ -1,6 +1,9 @@
 @import "../../../theme/variables.scss";
 
 .home {
+  li {
+    margin-right: 5px;
+  }
   .descktop {
     display: block;
     @media screen and (max-width: $breakpoint-sm) {

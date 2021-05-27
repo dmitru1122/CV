@@ -101,7 +101,7 @@ function Home() {
                   <ul className="list__content">
                     <li>Geography</li>
                     <li>History</li>
-                    <li>technology</li>
+                    <li>Technology</li>
                   </ul>
                   <div className="list__title app-text app-text--uppercase upp-text-m">
                     <div className="list__title-index">#3</div> Education
@@ -264,7 +264,7 @@ function Home() {
                       <h4 className="list__content__title">Link:</h4>
                       <ul>
                         <li>
-                          <a href="It is current site">It is current site</a>
+                          <a href="It is current site">https://github.com/dmitru1122/CV.git</a>
                         </li>
                       </ul>{" "}
                     </li>
@@ -447,7 +447,6 @@ function Home() {
                         </li>
                       </ul>
                     </li>
-                    <li></li>
 
                     <li>
                     <h4 className="list__content__title">Role:</h4>
