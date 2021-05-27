@@ -9,13 +9,3 @@ npm i
 ```
 npm run dev:client
 ```
-
-### development backend Node.js server
-```
-npm run dev:server
-```
-
-### Run production App
-```
-npm run start:prod
-```

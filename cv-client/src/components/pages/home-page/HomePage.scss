@@ -1,6 +1,15 @@
 @import "../../../theme/variables.scss";
 
 .home {
+  li {
+    margin-right: 5px;
+  }
+  .descktop {
+    display: block;
+    @media screen and (max-width: $breakpoint-sm) {
+      display: none;
+    }
+  }
   .link-block {
     display: flex;
     align-items: center;
@@ -42,6 +51,7 @@
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
+      z-index: 3;
 
       * {
         max-width: 70%;
@@ -52,8 +62,17 @@
 
       &__img {
         position: absolute;
-        left: -25%;
+        left: -5 * $basic-margin;
         top: 0px;
+        height: 100vh;
+        z-index: 1;
+
+        @media screen and (max-width: $breakpoint-sm) {
+          left: -10 * $basic-margin;
+        }
+        @media screen and (max-width: $breakpoint-xs) {
+          left: -12 * $basic-margin;
+        }
       }
     }
     &__hr {
@@ -89,5 +108,55 @@
   &__projects {
     margin-top: 5 * $basic-margin;
   }
+
+
+  .article-cs {
+    &__header-block {
+        
+        background-color: $ui-black;
+        border-radius: 0px (4 * $basic-margin) (4 * $basic-margin) 0px;
+        width: fit-content;
+        padding: 2 * $basic-margin;
+
+    }
+    &__main {
+
+        &__list {
+            margin-left: 3 * $basic-margin;
+        }
+    }
+
+    .list {
+        &__title{
+            margin: 2 * $basic-margin;
+            display: flex;
+            align-items: center;
+        }
+        &__title-index {
+            background-color: $ui-grey-light;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 2 * $basic-margin;
+            padding: $basic-margin;
+            width: 4 * $basic-margin;
+            height: 4 * $basic-margin;
+            border-radius: 50%;
+            border: 1px solid $ui-black;
+        }
+        &__content {
+            margin-left: 5 * $basic-margin;
+            max-width: 50 * $basic-margin;
+
+            &__title ~ ul li {
+              list-style-type: none;
+            }
+            @media screen and (max-width: $breakpoint-sm) {
+              margin-left: 2 * $basic-margin;
+              // height: 80vh;
+            }
+        }
+    }
+}
   
 }
