@@ -118,64 +118,7 @@
       z-index: -1;
     }
   }
-  &__about-myself {
+  &__article-cs {
     margin-top: 5 * $basic-margin;
-  }
-  &__technical-skills {
-    margin-top: 5 * $basic-margin;
-  }
-  &__projects {
-    margin-top: 5 * $basic-margin;
-  }
-
-  .article-cs {
-    &__header-block {
-      background-color: $ui-black;
-      border-radius: 0px (4 * $basic-margin) (4 * $basic-margin) 0px;
-      width: fit-content;
-      padding: 2 * $basic-margin;
-    }
-    &__main {
-      &__list {
-        margin-left: 3 * $basic-margin;
-      }
-    }
-
-    .list {
-      &__title {
-        margin: 2 * $basic-margin;
-        display: flex;
-        align-items: center;
-      }
-      &__title-index {
-        background-color: $ui-grey-light;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 2 * $basic-margin;
-        padding: $basic-margin;
-        width: 4 * $basic-margin;
-        height: 4 * $basic-margin;
-        border-radius: 50%;
-        border: 1px solid $ui-black;
-      }
-      &__content {
-        margin-left: 5 * $basic-margin;
-        max-width: 50 * $basic-margin;
-
-        a {
-          color: $ui-yellow-dark;
-          text-decoration: none;
-        }
-
-        &__title ~ ul li {
-          list-style-type: none;
-        }
-        @media screen and (max-width: $breakpoint-sm) {
-          margin-left: 2 * $basic-margin;
-          // height: 80vh;
-        }
-      }
-    }
   }
 }
