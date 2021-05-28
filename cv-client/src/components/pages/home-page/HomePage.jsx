@@ -28,6 +28,12 @@ function Home() {
           />
         </div>
         <div className="intro-block__right">
+          <div className="intro-block__experience app-text app-text--l app-text--uppercase">
+            experience
+            <div className="intro-block__experience__number app-text">
+              1<span className="app-text app-text--l">+</span>
+            </div>
+          </div>
           <h2
             className="intro-block__name app-text--uppercase app-text app-text--xxxl"
             title="DMITRU VABISHCHEVICH"
@@ -43,7 +49,10 @@ function Home() {
             Have experience with front-end and UI-design. Working with a focus
             on Optimal efficiency, quality, and functionality.
           </p>
-          <div className="intro-block__link app-text--l app-text link-block" onClick={() => scrollToRef(aboutMyselfRef)}>
+          <div
+            className="intro-block__link app-text--l app-text link-block"
+            onClick={() => scrollToRef(aboutMyselfRef)}
+          >
             About myself
             <img
               className="intro-block__link__img link-block__img"
@@ -51,7 +60,10 @@ function Home() {
               alt="arrow"
             />
           </div>
-          <div className="intro-block__link app-text--l app-text link-block" onClick={() => scrollToRef(skills)}>
+          <div
+            className="intro-block__link app-text--l app-text link-block"
+            onClick={() => scrollToRef(skills)}
+          >
             My skills
             <img
               className="intro-block__link__img link-block__img"
@@ -59,7 +71,10 @@ function Home() {
               alt="arrow"
             />
           </div>
-          <div className="intro-block__link app-text--l app-text link-block" onClick={() => scrollToRef(myProject)}>
+          <div
+            className="intro-block__link app-text--l app-text link-block"
+            onClick={() => scrollToRef(myProject)}
+          >
             My project
             <img
               className="intro-block__link__img link-block__img"
@@ -90,26 +105,14 @@ function Home() {
                       good planning & organisational skills and am confident
                       working independently or as part of a team.
                     </li>
-                    <li>
-                      My weakness is stubbornness. I can spend too much time
-                      looking for the best solution.
-                    </li>
                   </ul>
                   <div className="list__title app-text app-text--uppercase upp-text-m">
-                    <div className="list__title-index">#2</div> Hobbies
-                  </div>
-                  <ul className="list__content">
-                    <li>Geography</li>
-                    <li>History</li>
-                    <li>Technology</li>
-                  </ul>
-                  <div className="list__title app-text app-text--uppercase upp-text-m">
-                    <div className="list__title-index">#3</div> Education
+                    <div className="list__title-index">#2</div> Education
                   </div>
                   <ul className="list__content">
                     <li>
-                      Mechanical engineer <br/>'Brest State
-                      Technical University (BrSTU)'
+                      Mechanical engineer <br />
+                      'Brest State Technical University (BrSTU)'
                     </li>
                   </ul>
                 </>
@@ -264,7 +267,9 @@ function Home() {
                       <h4 className="list__content__title">Link:</h4>
                       <ul>
                         <li>
-                          <a href="It is current site">https://github.com/dmitru1122/CV.git</a>
+                          <a href="It is current site">
+                            https://github.com/dmitru1122/CV.git
+                          </a>
                         </li>
                       </ul>{" "}
                     </li>
@@ -338,9 +343,8 @@ function Home() {
                   </div>
                   <ul className="list__content">
                     <li>
-                    <h4 className="list__content__title">Stack:</h4>
+                      <h4 className="list__content__title">Stack:</h4>
                       <ul>
-                        
                         <li>
                           HTML, CSS, SASS, TypeScript, Vue.ts, Vue Router,
                           Node.js
@@ -348,30 +352,33 @@ function Home() {
                       </ul>
                     </li>
                     <li>
-                    <h4 className="list__content__title">Link:</h4>
+                      <h4 className="list__content__title">Link:</h4>
                       <ul>
                         <li>
-                          <a href="https://status.zupp.io/" target="_blank">
+                          <a
+                            href="https://status.zupp.io/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             https://status.zupp.io/
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li>
-                    <h4 className="list__content__title">Role:</h4>
+                      <h4 className="list__content__title">Role:</h4>
                       <ul>
-                        
                         <li>Front-end developer</li>
                       </ul>
                     </li>
                     <li>
-                    <h4 className="list__content__title">Description:</h4>
+                      <h4 className="list__content__title">Description:</h4>
                       <ul>
                         <li>Admin panel for zupp service</li>
                       </ul>
                     </li>
                     <li>
-                    <h4 className="list__content__title">Achievements:</h4>
+                      <h4 className="list__content__title">Achievements:</h4>
                       <ul>
                         <li>Work with team</li>
                         <li>Tested backend</li>
@@ -387,30 +394,34 @@ function Home() {
                   </div>
                   <ul className="list__content">
                     <li>
-                    <h4 className="list__content__title">Stack:</h4>
+                      <h4 className="list__content__title">Stack:</h4>
                       <ul>
                         <li>HTML, CSS, SASS, JavaScript, Vue.ts, Vue Router</li>
                       </ul>
                     </li>
                     <li>
-                    <h4 className="list__content__title">Link:</h4>
+                      <h4 className="list__content__title">Link:</h4>
                       <ul>
                         <li>
-                          <a href="https://www.rosey.ch/" target="_blank">
+                          <a
+                            href="https://www.rosey.ch/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
                             https://www.rosey.ch/
                           </a>
                         </li>
                       </ul>
                     </li>
                     <li>
-                    <h4 className="list__content__title">Role:</h4>
+                      <h4 className="list__content__title">Role:</h4>
                       <ul>
                         <li>Front-end developer</li>
                       </ul>
                     </li>
 
                     <li>
-                    <h4 className="list__content__title">Description:</h4>
+                      <h4 className="list__content__title">Description:</h4>
                       <ul>
                         <li>
                           We developed a client site for Switzerland school
@@ -418,7 +429,7 @@ function Home() {
                       </ul>
                     </li>
                     <li>
-                    <h4 className="list__content__title">Achievements:</h4>
+                      <h4 className="list__content__title">Achievements:</h4>
                       <ul>
                         <li>Work with a big team</li>
                         <li>
@@ -433,29 +444,35 @@ function Home() {
                   </div>
                   <ul className="list__content">
                     <li>
-                    <h4 className="list__content__title">Stack:</h4>
+                      <h4 className="list__content__title">Stack:</h4>
                       <ul>
                         <li>HTML, CSS, SASS, TypeScript, Vue.ts, Vue Router</li>
                       </ul>
                     </li>
 
                     <li>
-                    <h4 className="list__content__title">Link:</h4>
+                      <h4 className="list__content__title">Link:</h4>
                       <ul>
                         <li>
-                          <a href="https://scr.by/" target="_blank">https://scr.by/</a>
+                          <a
+                            href="https://scr.by/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            https://scr.by/
+                          </a>
                         </li>
                       </ul>
                     </li>
 
                     <li>
-                    <h4 className="list__content__title">Role:</h4>
+                      <h4 className="list__content__title">Role:</h4>
                       <ul>
                         <li>Front-end developer</li>
                       </ul>
                     </li>
                     <li>
-                    <h4 className="list__content__title">Description:</h4>
+                      <h4 className="list__content__title">Description:</h4>
                       <ul>
                         <li>
                           We created a client site to represent our company
@@ -463,7 +480,58 @@ function Home() {
                       </ul>
                     </li>
                     <li>
-                    <h4 className="list__content__title">Achievements:</h4>
+                      <h4 className="list__content__title">Achievements:</h4>
+                      <ul>
+                        <li>Built responsive application's UI</li>
+                        <li>
+                          Develop all frontend functionality from the ground up
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                  <div className="list__title app-text app-text--uppercase upp-text-m">
+                    <div className="list__title-index">#6</div> VStore
+                  </div>
+                  <ul className="list__content">
+                    <li>
+                      <h4 className="list__content__title">Stack:</h4>
+                      <ul>
+                        <li>
+                          HTML, CSS, SASS, JavaScript, React, React-Router,
+                          Redux
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <h4 className="list__content__title">Link:</h4>
+                      <ul>
+                        <li>
+                          <a
+                            href="http://vstore11.beget.tech/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            http://vstore11.beget.tech/
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <h4 className="list__content__title">Role:</h4>
+                      <ul>
+                        <li>Front-end developer</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h4 className="list__content__title">Description:</h4>
+                      <ul>
+                        <li>It's working project, nor final edition.</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <h4 className="list__content__title">Achievements:</h4>
                       <ul>
                         <li>Built responsive application's UI</li>
                         <li>
