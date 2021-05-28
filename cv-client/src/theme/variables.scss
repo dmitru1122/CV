@@ -1,7 +1,7 @@
 $ui-purple: #553795;
 $ui-purple-light: #664ba0;
-$ui-green: #6cc27f;
-$ui-green-dark: #62978f;
+$ui-yellow: #ffd700;
+$ui-yellow-dark: #af911e;
 $ui-white: #ffffff;
 $ui-black: #000000;
 $ui-grey: #6f6b79;
@@ -16,19 +16,14 @@ $breakpoint-md: 768px; //md
 $breakpoint-sm: 576px; //sm
 $breakpoint-xs: 360px;
 @mixin app-text {
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   color: $ui-black;
   &--grey {
     color: $ui-grey;
   }
   &--white {
     color: $ui-white;
-  }
-  &--green {
-    color: $ui-green;
-  }
-  &--green-dark {
-    color: $ui-green-dark;
   }
   &--uppercase {
     text-transform: uppercase;
@@ -44,10 +39,10 @@ $breakpoint-xs: 360px;
     font-size: 1.6875rem;
   }
   &--s {
-      font-size: 0.75rem;
+    font-size: 0.75rem;
   }
   &--m {
-      font-size: 1rem;
+    font-size: 1rem;
   }
   &--l {
     font-size: 1.625rem; //26px
@@ -56,12 +51,12 @@ $breakpoint-xs: 360px;
     font-size: 2.125rem; //34px
   }
   &--xxl {
-      font-size: 2.625rem; //42px
+    font-size: 2.625rem; //42px
   }
   &--xxxl {
     font-size: 3.125rem; //50px
   }
   &--xxxxl {
-    font-size: 3.5rem
+    font-size: 3.5rem;
   }
 }

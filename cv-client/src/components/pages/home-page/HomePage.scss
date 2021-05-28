@@ -83,7 +83,7 @@
         left: -5 * $basic-margin;
         top: 0px;
         height: 80vh;
-        min-height: 60 * $basic-margin;
+        min-height: 70 * $basic-margin;
         z-index: 1;
 
         @media screen and (max-width: $breakpoint-sm) {
@@ -162,6 +162,11 @@
       &__content {
         margin-left: 5 * $basic-margin;
         max-width: 50 * $basic-margin;
+
+        a {
+          color: $ui-yellow-dark;
+          text-decoration: none;
+        }
 
         &__title ~ ul li {
           list-style-type: none;

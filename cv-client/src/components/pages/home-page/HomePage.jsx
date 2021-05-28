@@ -277,6 +277,7 @@ function Home() {
                       <h4 className="list__content__title"> Role:</h4>
                       <ul>
                         <li>Front-end developer</li>
+                        <li>UI/UX designer</li>
                       </ul>
                     </li>
                     <li>
@@ -290,6 +291,7 @@ function Home() {
                       <ul>
                         <li>Design all project architecture and structure</li>
                         <li> Built responsive application's UI</li>
+
                         <li>
                           Develop all frontend functionality from the ground up
                         </li>
@@ -369,6 +371,7 @@ function Home() {
                       <h4 className="list__content__title">Role:</h4>
                       <ul>
                         <li>Front-end developer</li>
+                        <li>UI/UX designer</li>
                       </ul>
                     </li>
                     <li>
@@ -474,9 +477,7 @@ function Home() {
                     <li>
                       <h4 className="list__content__title">Description:</h4>
                       <ul>
-                        <li>
-                          We created a client site to represent our company
-                        </li>
+                        <li>We created a site to represent our company</li>
                       </ul>
                     </li>
                     <li>
@@ -522,6 +523,7 @@ function Home() {
                       <h4 className="list__content__title">Role:</h4>
                       <ul>
                         <li>Front-end developer</li>
+                        <li>UI/UX designer</li>
                       </ul>
                     </li>
                     <li>
