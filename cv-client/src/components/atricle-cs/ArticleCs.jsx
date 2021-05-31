@@ -79,13 +79,13 @@ function Article(props) {
                     {block.content &&
                     block.content.length &&
                     Array.isArray(block.content) ? (
-                      <li>
+                      <>
                         {block.content.map((currentPoint) => (
-                          <>
+                          <li>
                             <ListFromArrayContent list={currentPoint} />
-                          </>
+                          </li>
                         ))}
-                      </li>
+                      </>
                     ) : (
                       <li>Wrong content</li>
                     )}
