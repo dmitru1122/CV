@@ -323,8 +323,8 @@ function Home() {
                     header: "Achievements:",
                     type: "list",
                     text: [
+                      "Optimization",
                       "Design all project architecture and structure",
-                      "Optimization perfomanse",
                       "Built responsive application's UI",
                       "Develop all frontend functionality from the ground up",
                     ],
