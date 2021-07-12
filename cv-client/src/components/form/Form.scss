@@ -1,0 +1,138 @@
+@import "../../theme/variables.scss";
+.form {
+  * {
+    transition: all 0.5s ease;
+    z-index: 3;
+  }
+  form {
+    width: 100%;
+  }
+  &__title {
+    display: flex;
+    justify-content: center;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .field {
+    position: relative;
+    display: block;
+    min-height: 20px;
+    @include app-text;
+    color: $ui-black;
+    background: $ui-grey-light;
+    border-radius: 0.6 * $basic-margin;
+    border: 3px solid $ui-grey-light;
+    &:focus,
+    &:hover {
+      border-radius: 1 * $basic-margin;
+      border: 3px solid $ui-grey;
+      outline: none;
+    }
+  }
+  .field_padding {
+    padding: ($basic-margin * 1.25) ($basic-margin * 1.25);
+    margin: ($basic-margin * 1.25) ($basic-margin * 1.25);
+  }
+  .form-wrapper {
+    width: 70%;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    padding: (10 * $basic-margin) 0px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    &__row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      * {
+        flex: 1;
+      }
+      @media screen and (max-width: $breakpoint-lg) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .input-field-wrapper,
+        .input-area,
+        .field {
+          width: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: $breakpoint-md) {
+      width: 63 * $basic-margin;
+    }
+  }
+  .input-area {
+    width: 100%;
+    min-height: 24 * $basic-margin;
+  }
+  .submit-btn {
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 20%;
+    border-radius: 3.1 * $basic-margin;
+    background: $ui-grey;
+    border: none;
+    color: $ui-white;
+    background-color: $ui-yellow-dark;
+    &:hover {
+      background: $ui-grey;
+      color: $ui-grey-light;
+    }
+    @media screen and (max-width: $breakpoint-md) {
+      width: 40%;
+    }
+  }
+  .captcha {
+    position: fixed;
+    top: 25%;
+    width: 60%;
+    left: 20%;
+    padding: 5%;
+    background: $ui-purple-light;
+    display: flex;
+    justify-content: center;
+    border-radius: 3 * $basic-margin;
+    opacity: 0.9;
+    &__checkbox {
+      top: 30%;
+      left: 30%;
+      position: absolute;
+      opacity: 0;
+    }
+    &__item {
+      opacity: 1;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      background: 0 0;
+      opacity: 1;
+
+      display: block;
+      transform: scale(0.9);
+      left: 14%;
+    }
+    @media screen and (max-width: $breakpoint-xs) {
+      transform: scale(0.8);
+      left: 6%;
+    }
+  }
+
+  .request-note {
+    position: fixed;
+    top: 15%;
+    width: 60%;
+    left: 20%;
+    padding: 8 * $basic-margin;
+    border: 3px solid $ui-white;
+    border-radius: 3.1 * $basic-margin;
+    opacity: 0.9;
+    background-color: $ui-white;
+    transition-delay: 0.5s;
+  }
+}

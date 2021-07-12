@@ -47,7 +47,9 @@ function ListFromArrayContent(props) {
         <h4 className="list__content__title">{header}</h4>
         <ul>
           <li>
-            <a href={text}>{text}</a>
+            <a href={text} target="_blank" rel="noreferrer">
+              {text}
+            </a>
           </li>
         </ul>
       </>
@@ -67,7 +69,7 @@ function Article(props) {
         <div className="list article-cs__main__list">
           {blocks && blocks.length
             ? blocks.map((block, index) => (
-                <>
+                <div className="list__item">
                   <div
                     key={block.header}
                     className="list__title app-text app-text--uppercase upp-text-m"
@@ -81,7 +83,7 @@ function Article(props) {
                     Array.isArray(block.content) ? (
                       <>
                         {block.content.map((currentPoint) => (
-                          <li>
+                          <li key={currentPoint.header}>
                             <ListFromArrayContent list={currentPoint} />
                           </li>
                         ))}
@@ -90,7 +92,7 @@ function Article(props) {
                       <li>Wrong content</li>
                     )}
                   </ul>
-                </>
+                </div>
               ))
             : ""}
         </div>

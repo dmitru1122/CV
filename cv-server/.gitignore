@@ -21,8 +21,7 @@ npm-debug.log*
 /.vscode
 /node_modules
 */node_modules
-.env
-*/.env
+
 */fl-configs
 */logs
 */backups

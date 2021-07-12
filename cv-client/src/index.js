@@ -1,14 +1,24 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './views/App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./views/App";
+import reportWebVitals from "./reportWebVitals";
+import ReactGA from "react-ga";
+// import auth from "./auth.ts"; // Sample authentication provider
+
+const TRACKING_ID = "G-P9N62M68ZE"; //
+ReactGA.initialize(TRACKING_ID);
+// ReactGA.set({
+//   userId: auth.currentUserId(),
+//   // any data that is relevant to the user session
+//   // that you would like to track with google analytics
+// });
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 // If you want to start measuring performance in your app, pass a function
