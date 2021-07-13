@@ -105,7 +105,7 @@
 //         this.isHuman = false;
 //         this.isShowResponseMessage = true;
 //         this.isLoading = true;
-//         this.mailTemplate.subject = `Получен отклик с сайта Success Craft, тема обращения: ${this.formCont.treatment}`;
+//         this.mailTemplate.subject = `Получен отклик с сайта CV, тема обращения: ${this.formCont.treatment}`;
 //         this.mailTemplate.html = this.service.getMailTeplate(this.formCont);
 //         await this.service.sendMail(this.mailTemplate);
 

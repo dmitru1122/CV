@@ -1,12 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./views/App";
-import reportWebVitals from "./reportWebVitals";
-import ReactGA from "react-ga";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import ReactGA from 'react-ga';
+import App from './views/App';
+import reportWebVitals from './reportWebVitals';
 // import auth from "./auth.ts"; // Sample authentication provider
 
-const TRACKING_ID = "G-P9N62M68ZE"; //
+const TRACKING_ID = 'G-P9N62M68ZE'; //
 ReactGA.initialize(TRACKING_ID);
 // ReactGA.set({
 //   userId: auth.currentUserId(),
@@ -18,7 +18,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById("root")
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

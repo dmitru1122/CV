@@ -2,17 +2,16 @@ import Axios from 'axios';
 
 export * from 'axios';
 
-const axios = Axios.create({ withCredentials: true });
+const axios = Axios.create({ withCredentials: false });
 
 axios.interceptors.response.use(
-  response => {
-    return response;
-  },
+  response => response,
   err => {
-    const { data } = err.response;
-    const message = data && data.message ? data.message : 'Unhandled server error!';
+    throw err;
+    // const { data } = err.response;
+    // const message = data && data.message ? data.message : 'Unhandled server errorrr!';
 
-    throw new Error(`${message}`);
+    // throw new Error(`${message}`);
   }
 );
 

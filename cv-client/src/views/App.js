@@ -1,13 +1,11 @@
-import { Suspense, lazy, React } from "react";
+import { Suspense, lazy, React } from 'react';
 
 import HomePage from '../components/pages/home-page/HomePage';
-import "../theme/main.scss";
-const Header = lazy(() => import("../components/main-layout/header/Header"));
-const Footer = lazy(() =>
-  import("../components/main-layout/footer/Footer")
-);
-// const HomePage = lazy(() => import("../components/pages/home-page/HomePage"));
+import '../theme/main.scss';
 
+const Header = lazy(() => import('../components/main-layout/header/Header'));
+const Footer = lazy(() => import('../components/main-layout/footer/Footer'));
+// const HomePage = lazy(() => import("../components/pages/home-page/HomePage"));
 
 function App() {
   return (
@@ -16,7 +14,7 @@ function App() {
         <Header />
       </Suspense>
       {/* <Suspense fallback={<div>Loading...</div>}> */}
-        <HomePage />
+      <HomePage />
       {/* </Suspense> */}
       <Suspense fallback={<div>Loading...</div>}>
         <Footer />

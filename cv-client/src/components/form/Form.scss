@@ -1,4 +1,4 @@
-@import "../../theme/variables.scss";
+@import '../../theme/variables.scss';
 .form {
   * {
     transition: all 0.5s ease;
@@ -125,11 +125,13 @@
 
   .request-note {
     position: fixed;
+    text-align: center;
+    color: $ui-yellow-dark;
     top: 15%;
     width: 60%;
-    left: 20%;
     padding: 8 * $basic-margin;
     border: 3px solid $ui-white;
+    box-shadow: 10px 5px 5px $ui-grey;
     border-radius: 3.1 * $basic-margin;
     opacity: 0.9;
     background-color: $ui-white;

@@ -1,16 +1,20 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 export const Iform = {
-  firstName: PropTypes.string,
-  lastName: PropTypes.string,
+  name: PropTypes.string,
   email: PropTypes.string,
   phone: PropTypes.string,
+  country: PropTypes.string,
+  city: PropTypes.string,
+  company: PropTypes.string,
   additionalInfo: PropTypes.string,
 };
 export const IformDefault = {
-  firstName: "",
-  lastName: "",
-  email: "",
-  phone: "",
-  additionalInfo: "",
+  name: '',
+  email: '',
+  phone: '',
+  country: '',
+  city: '',
+  company: '',
+  additionalInfo: '',
 };
