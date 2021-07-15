@@ -5,7 +5,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.EmailService = void 0;
 const nodemailer_1 = __importDefault(require("nodemailer"));
-const TARGET_EMAIL_ADDRESS = process.env.CONTACTUS_RECIPIENTS;
 const EMAIL_SERV_USER = process.env.SSMTP_USER;
 const EMAIL_SERV_PASS = process.env.SSMTP_PASS;
 class EmailService {
@@ -23,9 +22,9 @@ class EmailService {
     }
     sendEmail(data) {
         return new Promise((resolve, reject) => {
-            const { subject, html } = data;
+            const { subject, html, to } = data;
             this.mail = {
-                to: TARGET_EMAIL_ADDRESS,
+                to,
                 subject,
                 html,
             };

@@ -79,6 +79,8 @@ const Form = () => {
     // this.props.onSubmit(recaptchaValue);
   };
 
+  const doNothing = () => {};
+
   return (
     <div className="form">
       <div className="form__title">
@@ -165,7 +167,7 @@ const Form = () => {
         </div>
         <div className="form-wrapper__row--recaptcha captcha">
           <ReCAPTCHA className="captcha" ref={recaptchaRef} sitekey={SITE_KEY} onChange={handleRecapthcaChange} />
-          <input checked={isHuman} className="captcha__checkbox" type="checkbox" required />
+          <input checked={isHuman} className="captcha__checkbox" type="checkbox" required onChange={doNothing} />
         </div>
         <button type="submit" className="submit-btn field_padding app-text--uppercase app-text">
           send

@@ -1,8 +1,8 @@
 swagger: "2.0"
 info:
   version: 1.0.0
-  title: sc-scr-webserver
-  description: The backend for SuccessCraft web portal BY
+  title: cv-webserver
+  description: The backend for VShop
 basePath: /api/v1
 tags:
   - name: Specification
@@ -85,19 +85,38 @@ definitions:
       subject:
         type: string
         example: subject
-  VacancyBody:
+  JeansBody:
     type: object
     title: Vacancy
     required:
-      - city_title
-      - active
+      - size
     properties:
-      city_title:
+      size:
         type: string
         example: Brest
-      active:
-        type: boolean
-        example: true
+      # title: Jeans
+      # required:
+      #   - typeee
+      #   - color
+      #   - price
+      #   - size
+      #   - fit
+      # properties:
+      #   color:
+      #     type: string
+      #     example: Black
+      #   typeee:
+      #     type: string
+      #     example: Jeans
+      #   price:
+      #     type: string
+      #     example: Expensive
+      #   size:
+      #     type: string
+      #     example: '30'
+      #   fit:
+      #     type: string
+      #     example: Regular fit
 
 paths:
   /ping-sf:
@@ -113,6 +132,21 @@ paths:
       responses:
         200:
           description: Return SF REST response
+        404:
+          description: Example error
+  /reload:
+    get:
+      tags:
+        - Reload
+      parameters:
+        - name: reloadHeroku
+          in: path
+          required: false
+          description: Reload heroku
+          type: string
+      responses:
+        200:
+          description: Server is alive
         404:
           description: Example error
   /send-email:
@@ -341,15 +375,15 @@ paths:
           description: Return SF REST response
         404:
           description: Error
-  /vacancy/vacancy:
+  /product/jeans:
     get:
       tags:
-        - Vacancy
+        - Jeans
       parameters:
         - name: ping
           in: path
           required: true
-          description: Vacancy for webApp
+          description: Jeans
           type: string
       responses:
         200:
@@ -360,25 +394,85 @@ paths:
       tags:
         - Vacancy
       parameters:
-        - name: city_title
+        - name: size
           in: body
           required: false
           description: City
           type: string
           schema:
-            $ref: '#/definitions/VacancyBody'
-        - name: active
-          in: body
-          requared: false
-          description: initialy active city
-          type: boolean
-          schema:
-            $ref: '#/definitions/VacancyBody'
+            $ref: '#/definitions/JeansBody'
       reaponses:
         200:
           description: Send Vacancy
         404:
-          description: Example error 
+          description: Example error  
+  # /product/jeans:
+  #   get:
+  #     tags:
+  #       - Jeans
+  #     parameters:
+  #       - name: city_title
+  #         in: body
+  #         required: false
+  #         description: Jeans
+  #         type: string
+  #       - name: color
+  #         in: body
+  #         required: false
+  #         description: Red
+  #         type: string
+  #       - name: price
+  #         in: body
+  #         required: false
+  #         description: '10'
+  #         type: string
+  #       - name: size
+  #         in: body
+  #         required: false
+  #         description: Jeans
+  #         type: string
+  #     responses:
+  #       200:
+  #         description: Return Jeans list
+  #       404:
+  #         description: Example error
+  #   post:
+  #     tags:
+  #       - Jeans
+  #     parameters:
+  #       - name: city_title
+  #         in: body
+  #         required: false
+  #         description: Red
+  #         type: string
+  #         schema:
+  #           $ref: '#/definitions/VacancyBody'
+  #       - name: color
+  #         in: body
+  #         requared: false
+  #         description: initial color
+  #         type: string
+  #         schema:
+  #           $ref: '#/definitions/VacancyBody'
+  #       # - name: price
+  #       #   in: body
+  #       #   requared: false
+  #       #   description: initial color
+  #       #   type: string
+  #       #   schema:
+  #       #     $ref: '#/definitions/JeansBody'
+  #       # - name: size
+  #       #   in: body
+  #       #   requared: false
+  #       #   description: initial color
+  #       #   type: string
+  #       #   schema:
+  #       #     $ref: '#/definitions/JeansBody'
+  #     reaponses:
+  #       200:
+  #         description: Send Jeans
+  #       404:
+  #         description: Example error
   /spec:
     get:
       tags:
