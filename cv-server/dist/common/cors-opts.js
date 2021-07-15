@@ -3,7 +3,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.corsOptions = void 0;
 exports.corsOptions = {
     origin: process.env.NODE_ENV !== 'production' ? '*' : process.env.HOST_NAME,
-    // origin: 'http://localhost:3001',
     optionsSuccessStatus: 204,
     methods: 'GET, HEAD, PUT, PATCH, POST, DELETE, OPTIONS',
     preflightContinue: true,
@@ -14,7 +13,6 @@ exports.corsOptions = {
 exports.default = (req, res, next) => {
     if (req.method === 'OPTIONS' || req.method === 'HEAD') {
         const origin = req.headers.origin;
-        // const origin = 'http://localhost:3001';
         res.header('Access-Control-Allow-Origin', origin);
         res.header('Access-Control-Allow-Credentials', 'true');
         res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE, OPTIONS');
