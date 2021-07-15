@@ -76,6 +76,11 @@
         position: absolute;
       }
     }
+    &__description {
+      @media screen and(max-width: $breakpoint-md) {
+        display: none;
+      }
+    }
     &__right {
       position: relative;
       flex: 3;
@@ -123,12 +128,17 @@
     }
 
     &__background-title {
+      white-space: nowrap;
+      overflow: hidden;
       position: absolute;
       left: 10%;
       top: 70 * $basic-margin;
       top: 70vh;
 
       z-index: -1;
+      @media screen and (max-width: $breakpoint-md) {
+        display: none;
+      }
     }
   }
   &__article-cs {
