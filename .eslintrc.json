@@ -1,23 +1,33 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-        "plugin:react/recommended",
-        "airbnb"
-    ],
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react"
-    ],
-    "rules": {
-        "react/react-in-jsx-scope": "off"
-    }
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": "off",
+    "react/prop-types": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "func-names": "off",
+    "no-process-exit": "off",
+    "object-shorthand": "off",
+    "class-methods-use-this": "off",
+    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "no-debugger": "error",
+    "no-unused-vars": ["warn", { "args": "none" }],
+    "prettier/prettier": ["warn", { "endOfLine": "auto" }],
+    "arrow-parens": [0],
+    "camelcase": ["error", { "properties": "never", "ignoreDestructuring": true }],
+    "no-use-before-define": "off",
+    "no-undef": "error",
+    "no-shadow": ["error", { "hoist": "all" }]
+  }
 }

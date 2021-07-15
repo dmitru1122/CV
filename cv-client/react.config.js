@@ -1,10 +1,9 @@
 module.exports = {
-    lintOnSave: false,
-    chainWebpack: config => {
-      config.plugin('html').tap(args => {
-        args[0].title = 'VFront';
-        return args;
-      });
-    },
-  };
-  
+  lintOnSave: false,
+  chainWebpack: (config) => {
+    config.plugin("html").tap((args) => {
+      args[0].title = "VFront";
+      return args;
+    });
+  },
+};

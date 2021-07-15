@@ -1,0 +1,132 @@
+@import '../../theme/variables.scss';
+.form {
+  * {
+    transition: all 0.5s ease;
+    z-index: 3;
+  }
+  form {
+    width: 100%;
+  }
+  &__title {
+    display: flex;
+    justify-content: center;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  .field {
+    position: relative;
+    display: block;
+    min-height: 20px;
+    @include app-text;
+    color: $ui-black;
+    background: $ui-grey-light;
+    border-radius: 0.6 * $basic-margin;
+    border: 3px solid $ui-grey-light;
+    &:focus,
+    &:hover {
+      border-radius: 1 * $basic-margin;
+      border: 3px solid $ui-grey;
+      outline: none;
+    }
+  }
+  .field_padding {
+    padding: ($basic-margin * 1.25) ($basic-margin * 1.25);
+    margin: ($basic-margin * 1.25) ($basic-margin * 1.25);
+  }
+  .form-wrapper {
+    width: 70%;
+    max-width: 1500px;
+    display: flex;
+    flex-direction: column;
+    padding: (10 * $basic-margin) 0px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    &__row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .input-field,
+      .input-area {
+        flex: 1;
+        width: 100%;
+      }
+      &--recaptcha {
+        display: flex;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90%;
+      }
+      @media screen and (max-width: $breakpoint-md) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .input-field-wrapper,
+        .input-area,
+        .field {
+          width: 90%;
+        }
+      }
+    }
+    @media screen and (max-width: $breakpoint-md) {
+      width: 63 * $basic-margin;
+    }
+  }
+  .input-area {
+    width: 100%;
+    min-height: 24 * $basic-margin;
+  }
+  .submit-btn {
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 20%;
+    border-radius: 3.1 * $basic-margin;
+    background: $ui-grey;
+    border: none;
+    color: $ui-white;
+    background-color: $ui-yellow-dark;
+    &:hover {
+      background: $ui-grey;
+      color: $ui-grey-light;
+    }
+    @media screen and (max-width: $breakpoint-md) {
+      width: 40%;
+    }
+  }
+  .captcha {
+    position: relative;
+    &__checkbox {
+      top: 30%;
+      left: 40%;
+      position: absolute;
+      opacity: 0;
+      z-index: -1;
+    }
+    @media screen and (max-width: $breakpoint-sm) {
+      transform: scale(0.9);
+    }
+    @media screen and (max-width: $breakpoint-xs) {
+      transform: scale(0.8);
+    }
+  }
+
+  .request-note {
+    position: fixed;
+    text-align: center;
+    color: $ui-yellow-dark;
+    top: 15%;
+    width: 60%;
+    padding: 8 * $basic-margin;
+    border: 3px solid $ui-white;
+    box-shadow: 10px 5px 5px $ui-grey;
+    border-radius: 3.1 * $basic-margin;
+    opacity: 0.9;
+    background-color: $ui-white;
+    transition-delay: 0.5s;
+  }
+}

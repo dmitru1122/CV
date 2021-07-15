@@ -16,5 +16,10 @@
     left: 10%;
     bottom: 0px;
     z-index: 1;
+    transition: all ease 0.4s;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }

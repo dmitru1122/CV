@@ -2,7 +2,7 @@ swagger: "2.0"
 info:
   version: 1.0.0
   title: sc-scr-webserver
-  description: The backend for VShop
+  description: The backend for SuccessCraft web portal BY
 basePath: /api/v1
 tags:
   - name: Specification
@@ -85,38 +85,19 @@ definitions:
       subject:
         type: string
         example: subject
-  JeansBody:
+  VacancyBody:
     type: object
     title: Vacancy
     required:
-      - size
+      - city_title
+      - active
     properties:
-      size:
+      city_title:
         type: string
         example: Brest
-      # title: Jeans
-      # required:
-      #   - typeee
-      #   - color
-      #   - price
-      #   - size
-      #   - fit
-      # properties:
-      #   color:
-      #     type: string
-      #     example: Black
-      #   typeee:
-      #     type: string
-      #     example: Jeans
-      #   price:
-      #     type: string
-      #     example: Expensive
-      #   size:
-      #     type: string
-      #     example: '30'
-      #   fit:
-      #     type: string
-      #     example: Regular fit
+      active:
+        type: boolean
+        example: true
 
 paths:
   /ping-sf:
@@ -360,15 +341,15 @@ paths:
           description: Return SF REST response
         404:
           description: Error
-  /product/jeans:
+  /vacancy/vacancy:
     get:
       tags:
-        - Jeans
+        - Vacancy
       parameters:
         - name: ping
           in: path
           required: true
-          description: Jeans
+          description: Vacancy for webApp
           type: string
       responses:
         200:
@@ -379,18 +360,25 @@ paths:
       tags:
         - Vacancy
       parameters:
-        - name: size
+        - name: city_title
           in: body
           required: false
           description: City
           type: string
           schema:
-            $ref: '#/definitions/JeansBody'
+            $ref: '#/definitions/VacancyBody'
+        - name: active
+          in: body
+          requared: false
+          description: initialy active city
+          type: boolean
+          schema:
+            $ref: '#/definitions/VacancyBody'
       reaponses:
         200:
           description: Send Vacancy
         404:
-          description: Example error  
+          description: Example error 
   /spec:
     get:
       tags:

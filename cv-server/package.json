@@ -1,12 +1,12 @@
 {
-  "name": "cv-server",
+  "name": "cv-webserver",
   "version": "1.0.1",
   "description": "The backend for CV",
   "main": "dist/index.js",
-  "author": "SuccessCraft",
+  "author": "DimaVab",
   "private": true,
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node src/index.js",
     "compile": "ts-node build.ts && tsc",
     "dev": "nodemon src/index.ts",
     "dev:debug": "nodemon --exec \"node -r ts-node/register --inspect-brk\" server/index.ts | pino-pretty",
@@ -14,18 +14,18 @@
     "test:debug": "mocha -r ts-node/register --inspect-brk test/**/*.ts --exit"
   },
   "dependencies": {
-    "@types/jsforce": "^1.9.28",
     "aws-sdk": "^2.868.0",
     "axios": "0.21.1",
     "body-parser": "^1.19.0",
+
+
     "connect-history-api-fallback": "1.6.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "crypto-js": "^4.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "jsforce": "^1.10.1",
-    "mongoose": "^5.12.5",
+    "mongoose": "^5.13.2",
     "nodemailer": "^6.5.0",
     "swagger-express-middleware": "^4.0.2"
   },
@@ -54,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/pavel-lobach/sc-scr-website.git"
   },
   "license": "Apache-2.0"
 }

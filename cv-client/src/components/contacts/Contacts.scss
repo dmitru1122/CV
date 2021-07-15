@@ -1,0 +1,74 @@
+// @import "../../theme/variables.scss";
+
+// .contacts {
+//   display: block;
+
+//   .contacts-section {
+//     .title {
+//       @extend .app-text--xxl !optional;
+//       margin: 7 * $basic-margin;
+//       color: $ui-black;
+//     }
+//     .content-wrap,
+//     .content-wrap h2,
+//     .additional-text {
+//       @extend .app-text--xl !optional;
+//     }
+//     .content-wrap a,
+//     .additional-text {
+//       font-weight: 700;
+//     }
+
+//     .content-wrap {
+//       display: flex;
+//       flex-direction: column;
+
+//       a {
+//         color: $ui-yellow-dark;
+//       }
+//     }
+//     .additional-text {
+//       margin-top: 6 * $basic-margin;
+//     }
+//     @media screen and (max-width: $breakpoint-sm) {
+//       .title {
+//         @extend .app-text--xxl !optional;
+//       }
+
+//       .content-wrap,
+//       .content-wrap h2,
+//       .additional-text {
+//         @extend .app-text--xxl !optional;
+//       }
+//     }
+//   }
+//   .contact-form {
+//     .select-wrapper {
+//       padding: 0;
+//     }
+//     .select {
+//       border: 2px solid $ui-grey;
+//       width: 100%;
+//       border-radius: 10px;
+//       @extend .app-text--m !optional;
+//       text-transform: uppercase;
+//       font-weight: 300;
+//       margin-top: 0;
+//       // background: 0 0,
+//       //   url(../../../assets/ar.svg) right 1rem center/(2.5 * $basic-margin)
+//       //     (1.2 * $basic-margin) no-repeat !important;
+
+//       option {
+//         @extend .app-text--m !optional;
+//       }
+//     }
+
+//     @media screen and (max-width: $breakpoint-lg) {
+//       .select {
+//         width: 83%;
+//         height: 30px;
+//         @extend .app-text--s !optional;
+//       }
+//     }
+//   }
+// }
