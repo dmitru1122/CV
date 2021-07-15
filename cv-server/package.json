@@ -6,7 +6,7 @@
   "author": "DimaVab",
   "private": true,
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node src/index.js",
     "compile": "ts-node build.ts && tsc",
     "dev": "nodemon src/index.ts",
     "dev:debug": "nodemon --exec \"node -r ts-node/register --inspect-brk\" server/index.ts | pino-pretty",
@@ -17,6 +17,8 @@
     "aws-sdk": "^2.868.0",
     "axios": "0.21.1",
     "body-parser": "^1.19.0",
+
+
     "connect-history-api-fallback": "1.6.0",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",

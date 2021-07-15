@@ -1,15 +1,22 @@
 import './Form.scss';
-import { lazy, Suspense, useState } from 'react';
-import { Iform, IformDefault } from '../../interfaces/allInterfaces';
+import { useState, useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
+
+import { IformDefault } from '../../interfaces/allInterfaces';
 import sendForm from '../../services/mail/mail.service';
 
-const LoadingSpinner = lazy(() => import('../loading-spinner/LoadinрSpinner'));
+import LoadingSpinner from '../loading-spinner/LoadinрSpinner';
+
+const SITE_KEY = '6LcBaZUbAAAAAHcvOM_vfMgIRibHOZywkbqpJKLL';
 
 const Form = () => {
   const [form, setForm] = useState(IformDefault);
+  const [isHuman, setIsHuman] = useState(false);
   const [isShowRequest, setIsShowRequest] = useState();
   const [isShowResponse, setIsShowRespone] = useState();
   const [isRequestSuccess, setIsRequestSuccess] = useState();
+
+  const recaptchaRef = useRef(null);
 
   const handleChange = event => {
     const { name } = event.target;
@@ -30,13 +37,20 @@ const Form = () => {
       setIsShowRespone(false);
       setIsRequestSuccess(false);
     };
+    const resetForm = () => {
+      setForm(IformDefault);
+    };
+    const resetCaptcha = () => {
+      setIsHuman(false);
+      recaptchaRef.current.reset();
+    };
     try {
       setIsShowRequest(true);
       const response = await sendForm({ form });
-      setForm(IformDefault);
+      resetForm();
+      resetCaptcha();
       setIsShowRespone(true);
       setIsRequestSuccess(true);
-
       setTimeout(hidResponse, 3000);
     } catch (error) {
       setIsShowRespone(true);
@@ -44,6 +58,16 @@ const Form = () => {
       setTimeout(hidResponse, 3000);
       console.error(`send Form error:${error}`);
     }
+  };
+
+  const handleRecapthcaChange = () => {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    if (recaptchaValue) {
+      setIsHuman(true);
+    }
+    console.log(recaptchaRef.current);
+
+    // this.props.onSubmit(recaptchaValue);
   };
 
   return (
@@ -130,6 +154,10 @@ const Form = () => {
             required
           />
         </div>
+        <div className="form-wrapper__row--recaptcha captcha">
+          <ReCAPTCHA className="captcha" ref={recaptchaRef} sitekey={SITE_KEY} onChange={handleRecapthcaChange} />
+          <input checked={isHuman} className="captcha__checkbox" type="checkbox" required />
+        </div>
         <button type="submit" className="submit-btn field_padding app-text--uppercase app-text">
           send
         </button>
@@ -137,9 +165,7 @@ const Form = () => {
       {isShowRequest ? (
         <div className="request-note app-text--uppercase app-text app-text--xxl">
           {!isShowResponse ? (
-            <Suspense fallback={<div>Loading...</div>}>
-              <LoadingSpinner />
-            </Suspense>
+            <LoadingSpinner />
           ) : (
             <>{isRequestSuccess ? <div className="success">Thanks for your reply</div> : <div>Error! check input data</div>}</>
           )}

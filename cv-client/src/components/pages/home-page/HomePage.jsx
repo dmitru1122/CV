@@ -159,6 +159,41 @@ const myProjectData = {
       ],
     },
     {
+      header: 'Cv',
+      content: [
+        {
+          header: 'Stack:',
+          type: 'list',
+          text: ['JavaScript, HTML, CSS, React.js, Node js, SCSS, Axios'],
+        },
+        {
+          header: 'Link:',
+          type: 'link',
+          text: ['https://github.com/dmitru1122/CV.git'],
+        },
+        {
+          header: 'Role:',
+          type: 'list',
+          text: ['Full-stack developer', 'UI/UX designer'],
+        },
+        {
+          header: 'Description:',
+          type: 'list',
+          text: ['Website to introduce myself'],
+        },
+        {
+          header: 'Achievements:',
+          type: 'list',
+          text: [
+            'Optimization',
+            'Design all project architecture and structure',
+            "Built responsive application's UI",
+            'Develop all frontend functionality from the ground up',
+          ],
+        },
+      ],
+    },
+    {
       header: 'VStore',
       content: [
         {
@@ -185,41 +220,6 @@ const myProjectData = {
           header: 'Achievements:',
           type: 'list',
           text: ["Built responsive application's UI", 'Develop all frontend functionality from the ground up with React.js'],
-        },
-      ],
-    },
-    {
-      header: 'Cv',
-      content: [
-        {
-          header: 'Stack:',
-          type: 'list',
-          text: ['JavaScript, HTML, CSS, React.js'],
-        },
-        {
-          header: 'Link:',
-          type: 'link',
-          text: ['https://github.com/dmitru1122/CV.git'],
-        },
-        {
-          header: 'Role:',
-          type: 'list',
-          text: ['Front-end developer', 'UI/UX designer'],
-        },
-        {
-          header: 'Description:',
-          type: 'list',
-          text: ['Website to introduce myself'],
-        },
-        {
-          header: 'Achievements:',
-          type: 'list',
-          text: [
-            'Optimization',
-            'Design all project architecture and structure',
-            "Built responsive application's UI",
-            'Develop all frontend functionality from the ground up',
-          ],
         },
       ],
     },
