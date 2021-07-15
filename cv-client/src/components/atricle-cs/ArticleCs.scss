@@ -18,18 +18,19 @@
       margin: 2 * $basic-margin;
       display: flex;
       align-items: center;
-    }
-    &__title-index {
-      background-color: $ui-grey-light;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin: 2 * $basic-margin;
-      padding: $basic-margin;
-      width: 4 * $basic-margin;
-      height: 4 * $basic-margin;
-      border-radius: 50%;
-      border: 1px solid $ui-black;
+
+      &-index {
+        background-color: $ui-grey-light;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2 * $basic-margin;
+        padding: $basic-margin;
+        width: 4 * $basic-margin;
+        height: 4 * $basic-margin;
+        border-radius: 50%;
+        border: 1px solid $ui-black;
+      }
     }
     &__content {
       margin-left: 5 * $basic-margin;
@@ -46,6 +47,29 @@
       @media screen and (max-width: $breakpoint-sm) {
         margin-left: 2 * $basic-margin;
       }
+    }
+
+    &__item:hover .list__title-index {
+      @keyframes glowing {
+        0% {
+          background-color: $ui-white;
+          color: $ui-black;
+          box-shadow: 0 0 5px $ui-yellow-dark;
+        }
+        50% {
+          background-color: $ui-grey-light;
+          color: $ui-grey;
+          box-shadow: 0 0 7px $ui-yellow-dark;
+        }
+        100% {
+          background-color: $ui-grey;
+          color: $ui-white;
+          box-shadow: 0 0 5px $ui-yellow-dark;
+        }
+      }
+      color: $ui-white;
+      background-color: $ui-grey;
+      animation: glowing 1300ms;
     }
   }
 }

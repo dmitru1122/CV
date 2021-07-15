@@ -32,21 +32,8 @@ class S3Service {
                 Body: file,
                 Key: `${folder}/${new Date().getTime()}-${name}`,
             };
-            const bucketParams = {
-                Bucket: BUCKET_NAME,
-                Prefix: 'Lb3PTKLVdJOlQmDG/1618572156119-index.html'
-            };
             console.log('S3 params: ');
             console.log(params);
-            this.s3.listObjectsV2(bucketParams, (err, data) => {
-                if (err) {
-                    console.log('Error in listBuckets:', err);
-                }
-                else {
-                    console.log('success', data);
-                    debugger;
-                }
-            });
             this.s3.upload(params, (err, data) => {
                 if (err) {
                     console.log('Upload to S3 Error: ');

@@ -1,6 +1,18 @@
-@import "../../../theme/variables.scss";
+@import '../../../theme/variables.scss';
 
 .home {
+  .background-text {
+    cursor: default;
+    z-index: -1;
+    opacity: 0.2;
+    font-family: revert;
+    font-size: 12rem;
+    // text-transform: uppercase;
+
+    @media screen and (max-width: $breakpoint-md) {
+      opacity: 0.1;
+    }
+  }
   li {
     margin-right: 5px;
   }
@@ -16,7 +28,7 @@
     justify-content: space-between;
     background-color: $ui-grey-light;
     padding: 0.8 * $basic-margin;
-    opacity: 0.8;
+    opacity: 0.6;
     border-radius: 3 * $basic-margin;
     height: 1.8 * $basic-margin;
     cursor: pointer;
@@ -27,10 +39,12 @@
       background-color: $ui-grey;
       height: 2.5 * $basic-margin;
       box-sizing: border-box;
+      transition: all 0.25s ease;
     }
 
     &:hover {
       opacity: 1;
+      width: 22 * $basic-margin;
 
       img {
         transform: rotate(90deg);
@@ -109,16 +123,65 @@
     }
 
     &__background-title {
-      opacity: 0.2;
-      font-family: revert;
-      font-size: 15rem;
       position: absolute;
       left: 10%;
-      bottom: 0px;
+      top: 70 * $basic-margin;
+      top: 70vh;
+
       z-index: -1;
     }
   }
   &__article-cs {
+    position: relative;
     margin-top: 5 * $basic-margin;
+
+    .background-decoration {
+      position: absolute;
+      right: 10%;
+      top: 0%;
+      writing-mode: vertical-lr;
+      text-orientation: upright;
+      white-space: nowrap;
+
+      &--design {
+        right: 20%;
+      }
+
+      // &:hover {
+      //   animation: rotation 0.5s linear;
+      // }
+
+      // @keyframes rotation {
+      //   from {
+      //     transform: rotateY(0deg);
+      //   }
+      //   to {
+      //     transform: rotateY(180deg);
+      //   }
+      // }
+    }
+
+    &:hover .background-decoration {
+      animation: rotation 5s infinite;
+
+      @keyframes rotation {
+        0% {
+          transform: rotateY(0deg);
+        }
+        50% {
+          transform: rotateY(180deg);
+        }
+        100% {
+          transform: rotateY(0deg);
+        }
+      }
+    }
+  }
+
+  &__form {
+    margin-top: 10 * $basic-margin;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
   }
 }

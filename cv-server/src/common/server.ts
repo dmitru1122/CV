@@ -26,35 +26,35 @@ export default class ExpressServer {
     app.use(bodyParser.text({ limit: process.env.REQUEST_LIMIT || '2000mb' }));
     app.use(cookieParser(process.env.SESSION_SECRET));
 
-    // if (env === 'dev') {
+    if (env === 'dev') {
       const devDir = path.normalize(__dirname + '/../..');
 
       app.use(corsSwagger);
       app.use(express.static(`${devDir}/public`));
-    // } else {
-    //   console.log('\nRoot directory: ', root, '\n');
-    //   console.log('================');
-    //   fs.readdirSync(root).forEach(file => {
-    //     console.log(file);
-    //   });
+    } else {
+      console.log('\nRoot directory: ', root, '\n');
+      console.log('================');
+      fs.readdirSync(root).forEach(file => {
+        console.log(file);
+      });
 
-    //   console.log('================\n');
+      console.log('================\n');
 
-    //   console.log('Public directory: ', publicDir, '\n');
-    //   console.log('================');
-    //   fs.readdirSync(publicDir).forEach(file => {
-    //     console.log(file);
-    //   });
-    //   console.log('================\n');
+      console.log('Public directory: ', publicDir, '\n');
+      console.log('================');
+      fs.readdirSync(publicDir).forEach(file => {
+        console.log(file);
+      });
+      console.log('================\n');
 
-    //   app.use(express.static(publicDir));
-    //   app.use(history());
-    //   app.use(express.static(publicDir));
+      app.use(express.static(publicDir));
+      app.use(history());
+      app.use(express.static(publicDir));
 
-    //   app.get('/', (_req, res) => {
-    //     res.sendFile(`${publicDir}/index.html`);
-    //   });
-    // }
+      app.get('/', (_req, res) => {
+        res.sendFile(`${publicDir}/index.html`);
+      });
+    }
 
     // if (['production', 'pre-production'].includes(env)) {
     //   app.use(express.static(`${root}/build/public`));
