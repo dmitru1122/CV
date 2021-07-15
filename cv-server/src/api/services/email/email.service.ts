@@ -1,6 +1,6 @@
 import Nodemailer from 'nodemailer';
 
-const TARGET_EMAIL_ADDRESS = process.env.CONTACTUS_RECIPIENTS;
+
 const EMAIL_SERV_USER = process.env.SSMTP_USER;
 const EMAIL_SERV_PASS = process.env.SSMTP_PASS;
 
@@ -21,11 +21,11 @@ export class EmailService {
     });
   }
 
-  public sendEmail(data: { subject: string; html: string }): Promise<any> {
+  public sendEmail(data: { subject: string; html: string, to: string }): Promise<any> {
     return new Promise((resolve, reject) => {
-      const { subject, html } = data;
+      const { subject, html, to } = data;
       this.mail = {
-        to: TARGET_EMAIL_ADDRESS,
+        to,
         subject,
         html,
       };

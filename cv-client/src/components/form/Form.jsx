@@ -1,7 +1,7 @@
 import './Form.scss';
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import ReCAPTCHA from 'react-google-recaptcha';
-
+import EmptyRequestForReloadServer from '../../services/reload-server/reload';
 import { IformDefault } from '../../interfaces/allInterfaces';
 import sendForm from '../../services/mail/mail.service';
 
@@ -17,6 +17,16 @@ const Form = () => {
   const [isRequestSuccess, setIsRequestSuccess] = useState();
 
   const recaptchaRef = useRef(null);
+
+  useEffect(() => {
+    try {
+      EmptyRequestForReloadServer();
+      // fetch('https://vabcv-webserver.herokuapp.com/api/v1');
+    } catch {
+      // console.log()
+      const err = 'Hi';
+    }
+  }, []);
 
   const handleChange = event => {
     const { name } = event.target;
@@ -65,10 +75,11 @@ const Form = () => {
     if (recaptchaValue) {
       setIsHuman(true);
     }
-    console.log(recaptchaRef.current);
 
     // this.props.onSubmit(recaptchaValue);
   };
+
+  const doNothing = () => {};
 
   return (
     <div className="form">
@@ -156,7 +167,7 @@ const Form = () => {
         </div>
         <div className="form-wrapper__row--recaptcha captcha">
           <ReCAPTCHA className="captcha" ref={recaptchaRef} sitekey={SITE_KEY} onChange={handleRecapthcaChange} />
-          <input checked={isHuman} className="captcha__checkbox" type="checkbox" required />
+          <input checked={isHuman} className="captcha__checkbox" type="checkbox" required onChange={doNothing} />
         </div>
         <button type="submit" className="submit-btn field_padding app-text--uppercase app-text">
           send

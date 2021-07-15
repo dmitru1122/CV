@@ -28,9 +28,7 @@ const body_parser_1 = __importDefault(require("body-parser"));
 const http_1 = __importDefault(require("http"));
 const os_1 = __importDefault(require("os"));
 const cookie_parser_1 = __importDefault(require("cookie-parser"));
-const connect_history_api_fallback_1 = __importDefault(require("connect-history-api-fallback"));
 const cors_1 = __importDefault(require("cors"));
-const fs_1 = __importDefault(require("fs"));
 const swagger_1 = __importDefault(require("./swagger"));
 const cors_opts_1 = __importStar(require("./cors-opts"));
 const app = express_1.default();
@@ -44,31 +42,30 @@ class ExpressServer {
         app.use(body_parser_1.default.urlencoded({ extended: true, limit: process.env.REQUEST_LIMIT || '2000mb' }));
         app.use(body_parser_1.default.text({ limit: process.env.REQUEST_LIMIT || '2000mb' }));
         app.use(cookie_parser_1.default(process.env.SESSION_SECRET));
-        if (env === 'dev') {
-            const devDir = path_1.default.normalize(__dirname + '/../..');
-            app.use(cors_opts_1.default);
-            app.use(express_1.default.static(`${devDir}/public`));
-        }
-        else {
-            console.log('\nRoot directory: ', root, '\n');
-            console.log('================');
-            fs_1.default.readdirSync(root).forEach(file => {
-                console.log(file);
-            });
-            console.log('================\n');
-            console.log('Public directory: ', publicDir, '\n');
-            console.log('================');
-            fs_1.default.readdirSync(publicDir).forEach(file => {
-                console.log(file);
-            });
-            console.log('================\n');
-            app.use(express_1.default.static(publicDir));
-            app.use(connect_history_api_fallback_1.default());
-            app.use(express_1.default.static(publicDir));
-            app.get('/', (_req, res) => {
-                res.sendFile(`${publicDir}/index.html`);
-            });
-        }
+        // if (env === 'dev') {
+        const devDir = path_1.default.normalize(__dirname + '/../..');
+        app.use(cors_opts_1.default);
+        app.use(express_1.default.static(`${devDir}/public`));
+        // } else {
+        //   console.log('\nRoot directory: ', root, '\n');
+        //   console.log('================');
+        //   fs.readdirSync(root).forEach(file => {
+        //     console.log(file);
+        //   });
+        //   console.log('================\n');
+        //   console.log('Public directory: ', publicDir, '\n');
+        //   console.log('================');
+        //   fs.readdirSync(publicDir).forEach(file => {
+        //     console.log(file);
+        //   });
+        //   console.log('================\n');
+        //   app.use(express.static(publicDir));
+        //   app.use(history());
+        //   app.use(express.static(publicDir));
+        //   app.get('/', (_req, res) => {
+        //     res.sendFile(`${publicDir}/index.html`);
+        //   });
+        // }
         // if (['production', 'pre-production'].includes(env)) {
         //   app.use(express.static(`${root}/build/public`));
         //   app.use(history());

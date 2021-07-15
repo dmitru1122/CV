@@ -13,6 +13,7 @@ const propTypes = {
       content: PropTypes.oneOfType([
         PropTypes.arrayOf(
           PropTypes.shape({
+            id: PropTypes.string,
             header: PropTypes.string,
             type: PropTypes.string,
             text: PropTypes.array,
@@ -29,7 +30,7 @@ const defaultProps = {
 };
 
 const iListFromArrayContent = {
-  list: PropTypes.objectOf({
+  list: PropTypes.shape({
     header: PropTypes.string,
     text: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
     type: PropTypes.string,
@@ -85,15 +86,15 @@ function Article(props) {
         <div className="list article-cs__main__list">
           {blocks && blocks.length
             ? blocks.map((block, index) => (
-                <div className="list__item">
-                  <div key={block.header} className="list__title app-text app-text--uppercase upp-text-m">
+                <div className="list__item" key={block.header}>
+                  <div className="list__title app-text app-text--uppercase upp-text-m">
                     <div className="list__title-index">#{index + 1}</div> {block.header}
                   </div>
                   <ul className="list__content">
                     {block.content && block.content.length && Array.isArray(block.content) ? (
                       <>
                         {block.content.map(currentPoint => (
-                          <li key={currentPoint.header}>
+                          <li key={currentPoint.id}>
                             <ListFromArrayContent list={currentPoint} />
                           </li>
                         ))}

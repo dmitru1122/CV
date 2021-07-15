@@ -7,11 +7,11 @@ const API_URL = 'https://vabcv-webserver.herokuapp.com/api/v1';
 const MAIL_ENDPOINT = 'send-email';
 
 const mailTemplate = { subject: `Получен отклик с сайта CV`, html: '', to: 'dmitruvab1122@gmail.com' };
-const clientTemplate = { subject: `Получен отклик с сайта CV`, html: '', to: '' };
+const clientTemplate = { subject: `Hi, i am Dima Vab`, html: '', to: '' };
 async function sendMail(form) {
   mailTemplate.html = GetHtmlTemplate(form);
   clientTemplate.html = GetClientHtmlTemplate();
-  clientTemplate.to = form.email;
+  clientTemplate.to = form.form.email;
 
   const { data } = await Axios.post(`${API_URL}/${MAIL_ENDPOINT}`, mailTemplate);
   await Axios.post(`${API_URL}/${MAIL_ENDPOINT}`, clientTemplate);
